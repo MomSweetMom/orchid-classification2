@@ -8,9 +8,9 @@ from fastai.vision import *
 import base64
 import sys
 
-model_file_url = 'https://github.com/pankymathur/Fine-Grained-Clothing-Classification/blob/master/data/cloth_categories/models/stage-1_sz-150.pth?raw=true'
-model_file_name = 'model'
-classes = ['Blouse', 'Blazer', 'Button-Down', 'Bomber', 'Anorak', 'Tee', 'Tank', 'Top', 'Sweater', 'Flannel', 'Hoodie', 'Cardigan', 'Jacket', 'Henley', 'Poncho', 'Jersey', 'Turtleneck', 'Parka', 'Peacoat', 'Halter', 'Skirt', 'Shorts', 'Jeans', 'Joggers', 'Sweatpants', 'Jeggings', 'Cutoffs', 'Sweatshorts', 'Leggings', 'Culottes', 'Chinos', 'Trunks', 'Sarong', 'Gauchos', 'Jodhpurs', 'Capris', 'Dress', 'Romper', 'Coat', 'Kimono', 'Jumpsuit', 'Robe', 'Caftan', 'Kaftan', 'Coverup', 'Onesie']
+model_file_url = 'https://s3.us-east-2.amazonaws.com/orchid-app/stage-1.pth'
+model_file_name = 'stage-1'
+classes = ['Brassavola','Catasetum','Cattleya', 'Cycnoches', 'Cymbidium', 'Dendrobium']
 
 path = Path(__file__).parent
 
@@ -63,4 +63,4 @@ def form(request):
 
 if __name__ == "__main__":
     if "serve" in sys.argv: 
-        uvicorn.run(app, host="0.0.0.0", port=8080)
+        uvicorn.run(app, host="0.0.0.0", port=8000)
